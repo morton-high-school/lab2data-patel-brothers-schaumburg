@@ -8,12 +8,46 @@ public class Cereal{
     String x[]=new String[20000];
     String j=a.nextLine();
     ArrayList<Cereal> y= new ArrayList<Cereal>();
+    int lolol= 0;
+    double rt1=0;
+    int count1= 0;
+    double avg1=0;
+    double rt2=0;
+    int count2= 0;
+    double avg2=0;
+    double rt3=0;
+    int count3= 0;
+    double avg3=0;
     while (a.hasNextLine()){
       x=a.nextLine().split(",");
       Cereal lol= new Cereal(x[0], Integer.parseInt(x[11]), Double.parseDouble(x[14]), x[1], Integer.parseInt(x[2]), Integer.parseInt(x[3]));
       y.add(lol);
+      lolol++;
     }
-    System.out.println(y);
+    for (int i=0; i<lolol; i++)
+    {
+      if (y[i].getShelf==1)
+      {
+        rt1=rt1+y[i].getRating;
+        count1++;
+      }
+      if (y[i].getShelf==2)
+      {
+        rt2=rt2+y[i].getRating;
+        count2++;
+      }
+      if (y[i].getShelf==3)
+      {
+        rt3=rt3+y[i].getRating;
+        count3++;
+      }
+    }
+    avg1=rt1/count1;
+    avg2=rt2/count2;
+    avg3=rt3/count3;
+    System.out.println("The average rating for shelf 1 is: " +avg1);
+    System.out.println("The average rating for shelf 2 is: " +avg2);
+    System.out.println("The average rating for shelf 3 is: " +avg3);
   }
 
   private String name;
