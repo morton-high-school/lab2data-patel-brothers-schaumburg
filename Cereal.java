@@ -26,19 +26,19 @@ public class Cereal{
     }
     for (int i=0; i<lolol; i++)
     {
-      if (y[i].getShelf==1)
+      if (y.get(i).getShelf()==1)
       {
-        rt1=rt1+y[i].getRating;
+        rt1=rt1+y.get(i).getRating();
         count1++;
       }
-      if (y[i].getShelf==2)
+      if (y.get(i).getShelf()==2)
       {
-        rt2=rt2+y[i].getRating;
+        rt2=rt2+y.get(i).getRating();
         count2++;
       }
-      if (y[i].getShelf==3)
+      if (y.get(i).getShelf()==3)
       {
-        rt3=rt3+y[i].getRating;
+        rt3=rt3+y.get(i).getRating();
         count3++;
       }
     }
